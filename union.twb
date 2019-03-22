@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook original-version='18.1' source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='BBY 2016+ (WIKI-BBY)' inline='true' name='federated.0h32sop0scyvel122j3160y4ulb7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='WIKI-BBY' name='excel-direct.0qsimzs0alrnh217baj5w1yh9ebp'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Tableau/WIKI-BBY.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='project'>
+          <columns>
+            <column caption='Date' hidden='true' name='[BBY 2016+].[Date]' />
+            <column caption='Date - 2015' hidden='true' name='[BBY 2016+].[Date - 2015]' />
+            <column caption='Date - 2014' hidden='true' name='[BBY 2016+].[Date - 2014]' />
+            <column name='[Project].[Date, Date - 2015, Date - 2014]' project-type='coalesce' />
+          </columns>
+          <bindings>
+            <binding expression='IF NOT ISNULL([BBY 2016+].[Date]) THEN [BBY 2016+].[Date]&#10;ELSEIF NOT ISNULL([BBY 2016+].[Date - 2015]) THEN [BBY 2016+].[Date - 2015]&#10;ELSEIF NOT ISNULL([BBY 2016+].[Date - 2014]) THEN [BBY 2016+].[Date - 2014]&#10;ELSE NULL&#10;END' name='[Project].[Date, Date - 2015, Date - 2014]' />
+          </bindings>
+          <relation all='true' name='BBY 2016+' type='union'>
+            <columns header='yes'>
+              <column datatype='date' name='Date' />
+              <column datatype='real' name='Open' />
+              <column datatype='real' name='High' />
+              <column datatype='real' name='Low' />
+              <column datatype='real' name='Close' />
+              <column datatype='integer' name='Volume' />
+              <column datatype='real' name='Ex-Dividend' />
+              <column datatype='integer' name='Split Ratio' />
+              <column datatype='real' name='Adj. Open' />
+              <column datatype='real' name='Adj. High' />
+              <column datatype='real' name='Adj. Low' />
+              <column datatype='real' name='Adj. Close' />
+              <column datatype='integer' name='Adj. Volume' />
+              <column datatype='date' name='Date - 2015' />
+              <column datatype='date' name='Date - 2014' />
+              <column datatype='string' name='Sheet' />
+              <column datatype='string' name='Table Name' />
+            </columns>
+            <relation connection='excel-direct.0qsimzs0alrnh217baj5w1yh9ebp' name='BBY 2016' table='[&apos;BBY 2016$&apos;]' type='table'>
+              <columns gridOrigin='A1:M204:no:A1:M204:0' header='yes' outcome='6'>
+                <column datatype='date' name='Date' ordinal='0' />
+                <column datatype='real' name='Open' ordinal='1' />
+                <column datatype='real' name='High' ordinal='2' />
+                <column datatype='real' name='Low' ordinal='3' />
+                <column datatype='real' name='Close' ordinal='4' />
+                <column datatype='integer' name='Volume' ordinal='5' />
+                <column datatype='real' name='Ex-Dividend' ordinal='6' />
+                <column datatype='integer' name='Split Ratio' ordinal='7' />
+                <column datatype='real' name='Adj. Open' ordinal='8' />
+                <column datatype='real' name='Adj. High' ordinal='9' />
+                <column datatype='real' name='Adj. Low' ordinal='10' />
+                <column datatype='real' name='Adj. Close' ordinal='11' />
+                <column datatype='integer' name='Adj. Volume' ordinal='12' />
+              </columns>
+            </relation>
+            <relation connection='excel-direct.0qsimzs0alrnh217baj5w1yh9ebp' name='BBY 2015' table='[&apos;BBY 2015$&apos;]' type='table'>
+              <columns gridOrigin='A1:M248:no:A1:M248:0' header='yes' outcome='6'>
+                <column datatype='date' name='Date - 2015' ordinal='0' />
+                <column datatype='real' name='Open' ordinal='1' />
+                <column datatype='real' name='High' ordinal='2' />
+                <column datatype='real' name='Low' ordinal='3' />
+                <column datatype='real' name='Close' ordinal='4' />
+                <column datatype='integer' name='Volume' ordinal='5' />
+                <column datatype='real' name='Ex-Dividend' ordinal='6' />
+                <column datatype='integer' name='Split Ratio' ordinal='7' />
+                <column datatype='real' name='Adj. Open' ordinal='8' />
+                <column datatype='real' name='Adj. High' ordinal='9' />
+                <column datatype='real' name='Adj. Low' ordinal='10' />
+                <column datatype='real' name='Adj. Close' ordinal='11' />
+                <column datatype='integer' name='Adj. Volume' ordinal='12' />
+              </columns>
+            </relation>
+            <relation connection='excel-direct.0qsimzs0alrnh217baj5w1yh9ebp' name='BBY 2014' table='[&apos;BBY 2014$&apos;]' type='table'>
+              <columns gridOrigin='A1:M247:no:A1:M247:0' header='yes' outcome='6'>
+                <column datatype='date' name='Date - 2014' ordinal='0' />
+                <column datatype='real' name='Open' ordinal='1' />
+                <column datatype='real' name='High' ordinal='2' />
+                <column datatype='real' name='Low' ordinal='3' />
+                <column datatype='real' name='Close' ordinal='4' />
+                <column datatype='integer' name='Volume' ordinal='5' />
+                <column datatype='real' name='Ex-Dividend' ordinal='6' />
+                <column datatype='integer' name='Split Ratio' ordinal='7' />
+                <column datatype='real' name='Adj. Open' ordinal='8' />
+                <column datatype='real' name='Adj. High' ordinal='9' />
+                <column datatype='real' name='Adj. Low' ordinal='10' />
+                <column datatype='real' name='Adj. Close' ordinal='11' />
+                <column datatype='integer' name='Adj. Volume' ordinal='12' />
+              </columns>
+            </relation>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date, Date - 2015, Date - 2014</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date, Date - 2015, Date - 2014]</local-name>
+            <parent-name>[Project]</parent-name>
+            <remote-alias>Date, Date - 2015, Date - 2014</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ex-Dividend</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Ex-Dividend]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Ex-Dividend</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Split Ratio</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Split Ratio]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Split Ratio</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj. Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adj. Open]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Adj. Open</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj. High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adj. High]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Adj. High</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj. Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adj. Low]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Adj. Low</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj. Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adj. Close]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Adj. Close</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj. Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Adj. Volume]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Adj. Volume</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[BBY 2016+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.339286' measure-ordering='alphabetic' measure-percentage='0.660714' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='BBY 2016+ (WIKI-BBY)' name='federated.0h32sop0scyvel122j3160y4ulb7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0h32sop0scyvel122j3160y4ulb7'>
+            <column datatype='date' name='[Date, Date - 2015, Date - 2014]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Open]' role='measure' type='quantitative' />
+            <column-instance column='[Open]' derivation='Avg' name='[pcdf:avg:Open:qk:1]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-field='[federated.0h32sop0scyvel122j3160y4ulb7].[yr:Date, Date - 2015, Date - 2014:ok]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Date, Date - 2015, Date - 2014]' derivation='Year' name='[yr:Date, Date - 2015, Date - 2014:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0h32sop0scyvel122j3160y4ulb7].[pcdf:avg:Open:qk:1]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0h32sop0scyvel122j3160y4ulb7].[yr:Date, Date - 2015, Date - 2014:ok]</cols>
+      </table>
+      <simple-id uuid='{24D47B2E-72FE-4422-BB7C-2D6863F2432A}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0h32sop0scyvel122j3160y4ulb7].[yr:Date, Date - 2015, Date - 2014:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{23C12B5E-BDD1-492B-AEE4-72BACAABAA2A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='65' name='Sheet 1' width='192'>
+      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
+      5+c/cmaqKfh/4H2l8faWRWcAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
